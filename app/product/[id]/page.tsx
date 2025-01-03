@@ -10,7 +10,7 @@ async function fetchProduct(id: string): Promise<Product> {
   return res.json();
 }
 
-// Correctly typed ProductPage component for Next.js app directory structure
+// Page Component with correct types for params
 export default async function ProductPage({ params }: { params: { id: string } }) {
   const product = await fetchProduct(params.id); // Fetch product data on the server
 
