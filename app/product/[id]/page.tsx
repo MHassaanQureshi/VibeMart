@@ -1,3 +1,5 @@
+// app/product/[id]/page.tsx
+
 import ProductClientComponent from "./ProductClientComponent";
 import { Product } from "@/app/types/product";
 
@@ -12,7 +14,9 @@ async function fetchProduct(id: string): Promise<Product> {
 
 // Page Component with correct types for params
 export default async function ProductPage({ params }: { params: { id: string } }) {
-  const product = await fetchProduct(params.id); // Fetch product data on the server
+  // Fetch product data on the server
+  const product = await fetchProduct(params.id);
 
+  // Render the client-side component with the product data
   return <ProductClientComponent product={product} />;
 }

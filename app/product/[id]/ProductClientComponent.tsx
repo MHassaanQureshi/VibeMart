@@ -1,3 +1,5 @@
+// app/product/ProductClientComponent.tsx
+
 "use client";
 
 import { useCart } from "@/app/context/CartContext";
@@ -8,7 +10,7 @@ export default function ProductClientComponent({ product }: { product: Product }
   const { addToCart } = useCart();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-black p-10 rounded-2xl  border-blue-500 border-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-black p-10 rounded-2xl border-blue-500 border-4">
       <Image src={product.image} alt={product.title} width={400} height={200} className="w-full h-96 object-contain" />
       <div>
         <h1 className="text-3xl font-bold">{product.title}</h1>
